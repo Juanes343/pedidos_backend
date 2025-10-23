@@ -17,6 +17,7 @@ app.use(cors({
   origin: [
     'https://frontend-login-gilt.vercel.app', 
     'https://pedidos-frontend.vercel.app',
+    'https://pedidos-frontend-omega.vercel.app',
     'https://pedidos-frontend-git-master-juanes343.vercel.app',
     'https://pedidos-frontend-juanes343.vercel.app',
     'http://localhost:3000',
