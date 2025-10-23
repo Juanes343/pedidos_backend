@@ -1,23 +1,23 @@
 {
   "version": 2,
-  "name": "convertidor-backend",
+  "name": "pedidos-backend",
   "builds": [
     {
-      "src": "servidor.js",
+      "src": "api/servidor.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/servidor.js"
+      "dest": "/api/servidor.js"
     }
   ],
   "env": {
     "NODE_ENV": "production"
   },
   "functions": {
-    "servidor.js": {
+    "api/servidor.js": {
       "maxDuration": 30
     }
   }
