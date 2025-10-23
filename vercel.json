@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "convertidor-backend",
+  "builds": [
+    {
+      "src": "servidor.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/servidor.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "servidor.js": {
+      "maxDuration": 30
+    }
+  }
+}
