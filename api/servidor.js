@@ -14,8 +14,17 @@ const app = express();
 
 // Middlewares básicos
 app.use(cors({
-  origin: ['https://frontend-login-gilt.vercel.app', 'http://localhost:3000'],
-  credentials: true
+  origin: [
+    'https://frontend-login-gilt.vercel.app', 
+    'https://pedidos-frontend.vercel.app',
+    'https://pedidos-frontend-git-master-juanes343.vercel.app',
+    'https://pedidos-frontend-juanes343.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
