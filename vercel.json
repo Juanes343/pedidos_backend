@@ -3,22 +3,17 @@
   "name": "pedidos-backend",
   "builds": [
     {
-      "src": "api/servidor.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/servidor.js"
+      "dest": "/index.js"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "api/servidor.js": {
-      "maxDuration": 30
-    }
   }
 }
